@@ -1,25 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun, Laptop } from "lucide-react"
+import { Moon, Sun, Laptop, LucideIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 
-const ThemeIcon = ({ icon: Icon }) => (
-  <Icon className="h-[1.2rem] w-[1.2rem]" />
+const ThemeIcon = ({ icon: Icon }:{icon:LucideIcon}) => (
+  <Icon className="h-4 w-4" />
 )
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
+  
   return (
     <fieldset className="inline-flex items-center rounded-md border p-1 dark:border-gray-700">
       <legend className="sr-only">Select a display theme:</legend>
