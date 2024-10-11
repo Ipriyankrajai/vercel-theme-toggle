@@ -10,9 +10,9 @@ const ThemeIcon = ({ icon: Icon }:{icon:LucideIcon}) => (
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
-  
-  return (
-    <fieldset className="inline-flex items-center rounded-md border p-1 dark:border-gray-700">
+
+    return (
+    <fieldset className="inline-flex items-center justify-center rounded-md border dark:border-gray-700 p-1">
       <legend className="sr-only">Select a display theme:</legend>
       {[
         { value: 'system', icon: Laptop },
